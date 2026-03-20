@@ -1,0 +1,2 @@
+deepspeed --include localhost:0,1,2,3,4,5,6,7 --master_port 29503 /code/yehangcheng/nanoRLHF/examples/r1-v0/grpo_r1.py \
+    --deepspeed /code/yehangcheng/LLaMA-Factory/yaml/deepspeed/ds_z3_config.json \
