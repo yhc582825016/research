@@ -1,0 +1,126 @@
+{
+  "root": "/mnt/code/yehangcheng/llm/model_code/qwen35",
+  "file_count": 5,
+  "module_count": 5,
+  "tree_lines": [
+    "├── __init__.py",
+    "├── configuration_qwen3_5.py",
+    "├── modeling_qwen3_5.py",
+    "├── modular_qwen3_5.py",
+    "└── tokenization_qwen3_5.py"
+  ],
+  "modules": [
+    {
+      "module": "__init__",
+      "file": "__init__.py",
+      "internal_dependencies": [
+        "configuration_qwen3_5",
+        "modeling_qwen3_5",
+        "tokenization_qwen3_5"
+      ],
+      "external_dependencies": [
+        "...utils",
+        "...utils.import_utils",
+        "sys",
+        "typing"
+      ]
+    },
+    {
+      "module": "configuration_qwen3_5",
+      "file": "configuration_qwen3_5.py",
+      "internal_dependencies": [],
+      "external_dependencies": [
+        "...configuration_utils",
+        "...modeling_rope_utils"
+      ]
+    },
+    {
+      "module": "modeling_qwen3_5",
+      "file": "modeling_qwen3_5.py",
+      "internal_dependencies": [
+        "configuration_qwen3_5"
+      ],
+      "external_dependencies": [
+        "...",
+        "...activations",
+        "...cache_utils",
+        "...generation",
+        "...integrations",
+        "...masking_utils",
+        "...modeling_flash_attention_utils",
+        "...modeling_layers",
+        "...modeling_outputs",
+        "...modeling_rope_utils",
+        "...modeling_utils",
+        "...processing_utils",
+        "...utils",
+        "...utils.generic",
+        "...utils.import_utils",
+        "...utils.output_capturing",
+        "causal_conv1d",
+        "collections.abc",
+        "dataclasses",
+        "fla.modules",
+        "fla.ops.gated_delta_rule",
+        "torch",
+        "torch.nn.functional",
+        "typing"
+      ]
+    },
+    {
+      "module": "modular_qwen3_5",
+      "file": "modular_qwen3_5.py",
+      "internal_dependencies": [],
+      "external_dependencies": [
+        "...",
+        "...cache_utils",
+        "...masking_utils",
+        "...modeling_layers",
+        "...modeling_outputs",
+        "...modeling_rope_utils",
+        "...modeling_utils",
+        "...processing_utils",
+        "...utils",
+        "...utils.generic",
+        "...utils.output_capturing",
+        "..qwen3.modeling_qwen3",
+        "..qwen3_next.configuration_qwen3_next",
+        "..qwen3_next.modeling_qwen3_next",
+        "..qwen3_vl.configuration_qwen3_vl",
+        "..qwen3_vl.modeling_qwen3_vl",
+        "torch",
+        "torch.nn.functional",
+        "typing"
+      ]
+    },
+    {
+      "module": "tokenization_qwen3_5",
+      "file": "tokenization_qwen3_5.py",
+      "internal_dependencies": [],
+      "external_dependencies": [
+        "...tokenization_utils_tokenizers",
+        "...utils",
+        "tokenizers",
+        "tokenizers.models"
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "from": "__init__",
+      "to": "configuration_qwen3_5"
+    },
+    {
+      "from": "__init__",
+      "to": "modeling_qwen3_5"
+    },
+    {
+      "from": "__init__",
+      "to": "tokenization_qwen3_5"
+    },
+    {
+      "from": "modeling_qwen3_5",
+      "to": "configuration_qwen3_5"
+    }
+  ]
+}
